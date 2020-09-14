@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lines",
+  "info": {
+    "name": "line"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "active": {
+      "type": "boolean",
+      "default": false
+    },
+    "slug": {
+      "type": "string",
+      "unique": false
+    },
+    "order": {
+      "type": "integer",
+      "unique": true,
+      "required": true,
+      "min": 1
+    }
+  }
+}
