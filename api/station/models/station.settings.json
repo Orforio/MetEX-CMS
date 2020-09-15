@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "places",
+  "collectionName": "stations",
   "info": {
-    "name": "place"
+    "name": "station"
   },
   "options": {
     "increments": true,
@@ -12,14 +12,29 @@
     "name": {
       "type": "string",
       "required": true,
-      "unique": true
+      "unique": false
     },
     "description": {
       "type": "richtext",
       "required": true
     },
+    "active": {
+      "type": "boolean",
+      "default": true
+    },
     "slug": {
       "type": "string"
+    },
+    "line": {
+      "model": "line"
+    },
+    "interchange": {
+      "model": "interchange"
+    },
+    "places": {
+      "collection": "place",
+      "via": "stations",
+      "dominant": true
     },
     "images": {
       "collection": "file",
@@ -30,9 +45,14 @@
       "plugin": "upload",
       "required": true
     },
-    "stations": {
-      "via": "places",
-      "collection": "station"
+    "sound": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files"
+      ],
+      "plugin": "upload",
+      "required": false
     }
   }
 }
