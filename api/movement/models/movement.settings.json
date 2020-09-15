@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "movements",
+  "info": {
+    "name": "movement"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "up_station": {
+      "model": "station"
+    },
+    "down_station": {
+      "model": "station"
+    },
+    "up_allowed": {
+      "type": "boolean",
+      "default": true
+    },
+    "down_allowed": {
+      "type": "boolean",
+      "default": true
+    },
+    "stations": {
+      "via": "movements",
+      "collection": "station"
+    }
+  }
+}

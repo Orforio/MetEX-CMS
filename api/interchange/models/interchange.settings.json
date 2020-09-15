@@ -16,6 +16,10 @@
     },
     "slug": {
       "type": "string"
+    },
+    "stations": {
+      "via": "interchange",
+      "collection": "station"
     }
   }
 }

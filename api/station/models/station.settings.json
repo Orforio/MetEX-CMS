@@ -26,10 +26,12 @@
       "type": "string"
     },
     "line": {
-      "model": "line"
+      "model": "line",
+      "via": "stations"
     },
     "interchange": {
-      "model": "interchange"
+      "model": "interchange",
+      "via": "stations"
     },
     "places": {
       "collection": "place",
@@ -53,6 +55,11 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "movements": {
+      "collection": "movement",
+      "via": "stations",
+      "dominant": true
     }
   }
 }

@@ -30,6 +30,10 @@
       "unique": true,
       "required": true,
       "min": 1
+    },
+    "stations": {
+      "via": "line",
+      "collection": "station"
     }
   }
 }
