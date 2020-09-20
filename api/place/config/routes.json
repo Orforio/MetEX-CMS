@@ -24,6 +24,14 @@
         "policies": []
       }
     },
+		{
+			"method": "GET",
+			"path": "/places/slug/:slug",
+			"handler": "place.findOneBySlug",
+			"config": {
+				"policies": []
+			}
+		},
     {
       "method": "POST",
       "path": "/places",
