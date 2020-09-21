@@ -20,22 +20,24 @@
     },
     "active": {
       "type": "boolean",
-      "default": true
+      "default": true,
+      "required": true
     },
     "slug": {
-      "type": "string"
+      "type": "string",
+      "required": false
     },
     "line": {
-      "model": "line",
-      "via": "stations"
+      "via": "stations",
+      "model": "line"
     },
     "interchange": {
-      "model": "interchange",
-      "via": "stations"
+      "via": "stations",
+      "model": "interchange"
     },
     "places": {
-      "collection": "place",
       "via": "stations",
+      "collection": "place",
       "dominant": true
     },
     "images": {

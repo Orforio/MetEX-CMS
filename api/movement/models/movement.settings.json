@@ -17,11 +17,13 @@
     },
     "up_allowed": {
       "type": "boolean",
-      "default": true
+      "default": true,
+      "required": true
     },
     "down_allowed": {
       "type": "boolean",
-      "default": true
+      "default": true,
+      "required": true
     },
     "stations": {
       "via": "movements",

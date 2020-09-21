@@ -15,15 +15,18 @@
       "unique": true
     },
     "description": {
-      "type": "text"
+      "type": "text",
+      "required": false
     },
     "active": {
       "type": "boolean",
-      "default": false
+      "default": false,
+      "required": true
     },
     "slug": {
       "type": "string",
-      "unique": false
+      "unique": true,
+      "required": false
     },
     "order": {
       "type": "integer",
@@ -32,8 +35,8 @@
       "min": 1
     },
     "stations": {
-      "via": "line",
-      "collection": "station"
+      "collection": "station",
+      "via": "line"
     }
   }
 }

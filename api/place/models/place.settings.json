@@ -19,7 +19,9 @@
       "required": true
     },
     "slug": {
-      "type": "string"
+      "type": "string",
+      "required": false,
+      "unique": true
     },
     "images": {
       "collection": "file",
@@ -31,8 +33,8 @@
       "required": true
     },
     "stations": {
-      "via": "places",
-      "collection": "station"
+      "collection": "station",
+      "via": "places"
     }
   }
 }
