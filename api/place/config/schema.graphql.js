@@ -12,8 +12,8 @@ module.exports = {
 				async resolver(_, { slug }) {
 					const entity = await strapi.services.place.findOne({ slug });
 					return sanitizeEntity(entity, { model: strapi.models.place });
-				},
-			},
+				}
+			}
 		}
 	}
 };
