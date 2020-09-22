@@ -13,6 +13,7 @@ module.exports = {
 					const entity = await strapi.services.station.findOne({
 						slug: stationSlug,
 						_where: {
+							active: true,
 							'line.slug': lineSlug
 						}
 					});
