@@ -2,11 +2,13 @@
   "kind": "collectionType",
   "collectionName": "lines",
   "info": {
-    "name": "line"
+    "name": "line",
+    "description": ""
   },
   "options": {
     "increments": true,
-    "timestamps": true
+    "timestamps": true,
+    "draftAndPublish": true
   },
   "attributes": {
     "name": {
@@ -17,11 +19,6 @@
     "description": {
       "type": "text",
       "required": false
-    },
-    "active": {
-      "type": "boolean",
-      "default": false,
-      "required": true
     },
     "slug": {
       "type": "string",
@@ -35,8 +32,8 @@
       "min": 1
     },
     "stations": {
-      "collection": "station",
-      "via": "line"
+      "via": "line",
+      "collection": "station"
     }
   }
 }

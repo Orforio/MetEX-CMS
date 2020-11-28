@@ -2,11 +2,13 @@
   "kind": "collectionType",
   "collectionName": "stations",
   "info": {
-    "name": "station"
+    "name": "station",
+    "description": ""
   },
   "options": {
     "increments": true,
-    "timestamps": true
+    "timestamps": true,
+    "draftAndPublish": true
   },
   "attributes": {
     "name": {
@@ -18,26 +20,21 @@
       "type": "richtext",
       "required": true
     },
-    "active": {
-      "type": "boolean",
-      "default": true,
-      "required": true
-    },
     "slug": {
       "type": "string",
       "required": false
     },
     "line": {
-      "via": "stations",
-      "model": "line"
+      "model": "line",
+      "via": "stations"
     },
     "interchange": {
-      "via": "stations",
-      "model": "interchange"
+      "model": "interchange",
+      "via": "stations"
     },
     "places": {
-      "via": "stations",
       "collection": "place",
+      "via": "stations",
       "dominant": true
     },
     "images": {
