@@ -20,8 +20,8 @@
       "unique": true
     },
     "stations": {
-      "collection": "station",
-      "via": "interchange"
+      "via": "interchange",
+      "collection": "station"
     }
   }
 }
