@@ -1,13 +1,14 @@
 {
   "name": "metex-cms",
   "private": true,
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "The Strapi CMS for MétEX",
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
-    "strapi": "strapi"
+    "strapi": "strapi",
+    "ngrok": "ngrok http --domain=ray-fun-dassie.ngrok-free.app 1337"
   },
   "devDependencies": {},
   "dependencies": {
@@ -27,7 +28,7 @@
     "strapi-utils": "3.6.8"
   },
   "author": {
-    "name": "Richard Whittaker"
+    "name": "Kit Whittaker"
   },
   "strapi": {
     "uuid": "3fc18218-3d5c-4575-9811-058693de44a7"
